@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_projects/welcome.dart';
 
 void main() {
   runApp(const MyApp());
@@ -83,6 +84,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 width: 280,
                 // color: Colors.blue,
                 child: ElevatedButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder:(BuildContext context){
+                    return Welcome();
+                  }));
 
 
                 }, 
@@ -105,7 +109,7 @@ class _MyHomePageState extends State<MyHomePage> {
              
              
              
-          ],
+            ],
           
           ),
         
