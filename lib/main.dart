@@ -57,10 +57,10 @@ class _MyHomePageState extends State<MyHomePage> {
             SizedBox(height: 70,),
              Image.asset('assets/images/logo.png',height: 100,),
 
-             SizedBox(height: 25,),
+             SizedBox(height: 33,),
 
               Container(
-                height: 51,
+                height: 46,
                 width: 280,
                 child: TextField(
                 
@@ -80,7 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
               SizedBox(height: 17,),
               Container(
             
-                height: 51,
+                height: 46,
                 width: 280,
                 // color: Colors.blue,
                 child: ElevatedButton(onPressed: (){

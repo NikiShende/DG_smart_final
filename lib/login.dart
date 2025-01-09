@@ -111,9 +111,9 @@ class _LoginState extends State<Login> {
       
           
            
-            SizedBox(height: 20,),
+            SizedBox(height: 25,),
             Container(
-                  height: 51,
+                  height: 46,
                   width: 280,
                   
                   child: TextField(
@@ -133,7 +133,7 @@ class _LoginState extends State<Login> {
                 ),
                 SizedBox(height: 20,),
                 Container(
-                  height: 51,
+                  height: 46,
                   width: 280,
                   
                   child: TextField(
@@ -154,7 +154,7 @@ class _LoginState extends State<Login> {
                 SizedBox(height: 20,),
 
                 Container(
-                  height: 51,
+                  height: 46,
                   width: 280,
                   child: ElevatedButton(onPressed: (){
                     // Custom login action
