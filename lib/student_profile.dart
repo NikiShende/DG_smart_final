@@ -13,7 +13,6 @@ class _StudentProfileState extends State<StudentProfile> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Student Profile', style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
-        leading: Icon(Icons.menu, color: Colors.black,),
         
         backgroundColor: Colors.blue,
       ),
@@ -24,9 +23,9 @@ class _StudentProfileState extends State<StudentProfile> {
             Transform.translate(
               offset: Offset(-40, -250),
               child: Transform.rotate(
-                angle: 1.1,
+                angle: 1.2,
                 child: Container(
-                  height: 500,
+                  height: 440,
                   width: double.infinity,
                   color: Colors.blue,
                   child: ListTile(
@@ -38,7 +37,7 @@ class _StudentProfileState extends State<StudentProfile> {
               ),
             ),
             Transform.translate(
-              offset: Offset(0, -400),
+              offset: Offset(0, -370),
               child: CircleAvatar(
                 radius: 60,
                 backgroundImage: AssetImage('assets/images/stud.png'),
@@ -46,7 +45,7 @@ class _StudentProfileState extends State<StudentProfile> {
               
             ),
             Transform.translate(
-              offset: Offset(0, -400),
+              offset: Offset(0, -370),
               child: Column(
                 children: [
                   SizedBox(height:40,),
@@ -55,18 +54,21 @@ class _StudentProfileState extends State<StudentProfile> {
                     width: 280,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(5),
-                      border: Border.all(color: Colors.black, width: 1),
+                      border: Border.all(color: Colors.grey, width: 1),
                     ),
-                    child: RichText(
-                      text: TextSpan(
-                        text: ' Full Name: ', // Base text style
-                        style: TextStyle(fontSize: 16, color: Colors.black), // Default style
-                        children: [
-                          TextSpan(
-                            text: 'Priyanka Dube', 
-                            style: TextStyle(fontWeight: FontWeight.bold), // Bold text style
-                          ),
-                        ],
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: RichText(
+                        text: TextSpan(
+                          text: ' Full Name: ', // Base text style
+                          style: TextStyle(fontSize: 16, color: Colors.black), // Default style
+                          children: [
+                            TextSpan(
+                              text: 'Priyanka Dube', 
+                              style: TextStyle(fontWeight: FontWeight.bold), // Bold text style
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -78,43 +80,50 @@ class _StudentProfileState extends State<StudentProfile> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(5),
                         // color: Colors.white,
-                        border: Border.all(color: Colors.black, width: 1),
+                        border: Border.all(color: Colors.grey, width: 1),
                       ),
-                      child: RichText(
-                      text: TextSpan(
-                        text: 'standard:10A ', // Base text style
-                        style: TextStyle(fontSize: 16, color: Colors.black),
-                         // Default style
-                        children: [
-                          TextSpan(
-                            text: 'Div :A', 
-                            style: TextStyle(fontWeight: FontWeight.bold), // Bold text style
-                          ),
-                        ],
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: RichText(
+                        text: TextSpan(
+                          text: 'standard:10A ', // Base text style
+                          style: TextStyle(fontSize: 16, color: Colors.black),
+                           // Default style
+                          children: [
+                           
+                            TextSpan(
+                              text: 'Div :A', 
+                              style: TextStyle(fontWeight: FontWeight.bold), // Bold text style
+                            ),
+                          ],
+                        ),
+                                            ),
                       ),
-                    ),
                      ),
                       SizedBox(height:15,),
                      Container(
                       height: 46,
                       width: 280,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5),
+                        borderRadius: BorderRadius.circular(3),
                         // color: Colors.white,
-                        border: Border.all(color: Colors.black, width: 1),
+                        border: Border.all(color: Colors.grey, width: 1),
                       ),
-                      child: RichText(
-                      text: TextSpan(
-                        text: 'Roll No: ', // Base text style
-                        style: TextStyle(fontSize: 16, color: Colors.black), // Default style
-                        children: [
-                          TextSpan(
-                            text: 'R001', 
-                            style: TextStyle(fontWeight: FontWeight.bold), // Bold text style
-                          ),
-                        ],
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: RichText(
+                        text: TextSpan(
+                          text: 'Roll No: ', // Base text style
+                          style: TextStyle(fontSize: 16, color: Colors.black), // Default style
+                          children: [
+                            TextSpan(
+                              text: 'R001', 
+                              style: TextStyle(fontWeight: FontWeight.bold), // Bold text style
+                            ),
+                          ],
+                        ),
+                                            ),
                       ),
-                    ),
                ),
                SizedBox(height:15,),
                      Container(
@@ -123,20 +132,23 @@ class _StudentProfileState extends State<StudentProfile> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(5),
                         // color: Colors.white,
-                        border: Border.all(color: Colors.black, width: 1),
+                        border: Border.all(color: Colors.grey, width: 1),
                       ),
-                      child: RichText(
-                      text: TextSpan(
-                        text: 'Mobile Number: ', // Base text style
-                        style: TextStyle(fontSize: 16, color: Colors.black), // Default style
-                        children: [
-                          TextSpan(
-                            text: '7890346789', 
-                            style: TextStyle(fontWeight: FontWeight.bold), // Bold text style
-                          ),
-                        ],
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: RichText(
+                        text: TextSpan(
+                          text: 'Mobile Number: ', // Base text style
+                          style: TextStyle(fontSize: 16, color: Colors.black), // Default style
+                          children: [
+                            TextSpan(
+                              text: '7890346789', 
+                              style: TextStyle(fontWeight: FontWeight.bold), // Bold text style
+                            ),
+                          ],
+                        ),
+                                            ),
                       ),
-                    ),
                ),
                SizedBox(height:15,),
                      Container(
@@ -145,20 +157,23 @@ class _StudentProfileState extends State<StudentProfile> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(5),
                         // color: Colors.white,
-                        border: Border.all(color: Colors.black, width: 1),
+                        border: Border.all(color: Colors.grey, width: 1),
                       ),
-                      child: RichText(
-                      text: TextSpan(
-                        text: 'Birth Date: ', // Base text style
-                        style: TextStyle(fontSize: 16, color: Colors.black), // Default style
-                        children: [
-                          TextSpan(
-                            text: '20/8/2008', 
-                            style: TextStyle(fontWeight: FontWeight.bold), // Bold text style
-                          ),
-                        ],
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: RichText(
+                        text: TextSpan(
+                          text: 'Birth Date: ', // Base text style
+                          style: TextStyle(fontSize: 16, color: Colors.black), // Default style
+                          children: [
+                            TextSpan(
+                              text: '20/8/2008', 
+                              style: TextStyle(fontWeight: FontWeight.bold), // Bold text style
+                            ),
+                          ],
+                        ),
+                                            ),
                       ),
-                    ),
                ),
                SizedBox(height:15,),
                      Container(
@@ -167,20 +182,23 @@ class _StudentProfileState extends State<StudentProfile> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(5),
                         // color: Colors.white,
-                        border: Border.all(color: Colors.black, width: 1),
+                        border: Border.all(color: Colors.grey, width: 1),
                       ),
-                      child: RichText(
-                      text: TextSpan(
-                        text: 'Email ID: ', // Base text style
-                        style: TextStyle(fontSize: 16, color: Colors.black), // Default style
-                        children: [
-                          TextSpan(
-                            text: 'priyankai@gmail.com', 
-                            style: TextStyle(fontWeight: FontWeight.bold), // Bold text style
-                          ),
-                        ],
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: RichText(
+                        text: TextSpan(
+                          text: 'Email ID: ', // Base text style
+                          style: TextStyle(fontSize: 16, color: Colors.black), // Default style
+                          children: [
+                            TextSpan(
+                              text: 'priyankai@gmail.com', 
+                              style: TextStyle(fontWeight: FontWeight.bold), // Bold text style
+                            ),
+                          ],
+                        ),
+                                            ),
                       ),
-                    ),
                ),
 
 

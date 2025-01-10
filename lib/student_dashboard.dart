@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_projects/homework.dart';
 import 'package:flutter_projects/student_profile.dart';
 
 class StudentDashboard extends StatefulWidget {
@@ -215,26 +216,31 @@ class _StudentDashboardState extends State<StudentDashboard> {
                   
                    Padding(
                      padding: const EdgeInsets.all(5.0),
-                     child: Container(
-                                     height: 120,
-                                     width: 169,
-                                     decoration: BoxDecoration(
-                                       borderRadius: BorderRadius.circular(5),
-                                       color: const Color.fromARGB(255, 219, 160, 155),
-                                      
+                     child: InkWell(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>Homework(),));
+                      },
+                       child: Container(
+                                       height: 120,
+                                       width: 169,
+                                       decoration: BoxDecoration(
+                                         borderRadius: BorderRadius.circular(5),
+                                         color: const Color.fromARGB(255, 219, 160, 155),
+                                        
+                                       ),
+                                       child:  Row(
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.only(bottom: 50,left: 5),
+                                            child: Text('Homework',style: TextStyle(fontSize: 19,fontWeight: FontWeight.bold),),
+                                          ),
+                                          SizedBox(width: 5,),
+                                          Image.asset('assets/images/homework.png',height: 70,),
+                                           
+                                        ],
+                                       ),
                                      ),
-                                     child:  Row(
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.only(bottom: 50,left: 5),
-                                          child: Text('Homework',style: TextStyle(fontSize: 19,fontWeight: FontWeight.bold),),
-                                        ),
-                                        SizedBox(width: 5,),
-                                        Image.asset('assets/images/homework.png',height: 70,),
-                                         
-                                      ],
-                                     ),
-                                   ),
+                     ),
                    ),
               // SizedBox(width: 10,),
 
