@@ -12,7 +12,9 @@ class _StudentProfileState extends State<StudentProfile> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Student Profile', style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
+        foregroundColor: Colors.white,
+       
+        title: Text('Student Profile', style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold,color: Colors.white)),
         
         backgroundColor: Colors.blue,
       ),
@@ -56,21 +58,28 @@ class _StudentProfileState extends State<StudentProfile> {
                       borderRadius: BorderRadius.circular(5),
                       border: Border.all(color: Colors.grey, width: 1),
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: RichText(
-                        text: TextSpan(
-                          text: ' Full Name: ', // Base text style
-                          style: TextStyle(fontSize: 16, color: Colors.black), // Default style
-                          children: [
-                            TextSpan(
-                              text: 'Priyanka Dube', 
-                              style: TextStyle(fontWeight: FontWeight.bold), // Bold text style
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      children: [
+                         Text(
+                              'Full Name:', 
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16,
+                              ),
                             ),
-                          ],
-                        ),
-                      ),
+                            SizedBox(width: 10),
+                            Text(
+                              'Priyanka Dube', 
+                              style: TextStyle(
+                                fontWeight: FontWeight.normal,
+                                fontSize: 16,
+                              ),
+                            ),
+                      ],
                     ),
+                  ),
                   ),
 
                       SizedBox(height:15,),
@@ -84,22 +93,76 @@ class _StudentProfileState extends State<StudentProfile> {
                       ),
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: RichText(
-                        text: TextSpan(
-                          text: 'standard:10A ', // Base text style
-                          style: TextStyle(fontSize: 16, color: Colors.black),
-                           // Default style
+                        child: Row(
                           children: [
-                           
-                            TextSpan(
-                              text: 'Div :A', 
-                              style: TextStyle(fontWeight: FontWeight.bold), // Bold text style
+                             Text(
+                              'Class:', 
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16,
+                              ),
                             ),
+                            SizedBox(width: 10),
+                            Text(
+                              '10', 
+                              style: TextStyle(
+                                fontWeight: FontWeight.normal,
+                                fontSize: 16,
+                              ),
+                            ),
+                            SizedBox(width: 40,),
+                            Text(
+                              'Div:', 
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16,
+                              ),
+                            ),
+                            Text(
+                              'A', 
+                              style: TextStyle(
+                                fontWeight: FontWeight.normal,
+                                fontSize: 16,
+                              ),
+                            ),
+                        
+                        
                           ],
                         ),
-                                            ),
                       ),
                      ),
+                     SizedBox(height:15,),
+                     Container(
+                      height: 46,
+                      width: 280,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
+                        // color: Colors.white,
+                        border: Border.all(color: Colors.grey, width: 1),
+                      ),
+                      child:  Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                                            children: [
+                         Text(
+                              'Roll No:', 
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16,
+                              ),
+                            ),
+                            SizedBox(width: 10),
+                            Text(
+                              '54', 
+                              style: TextStyle(
+                                fontWeight: FontWeight.normal,
+                                fontSize: 16,
+                              ),
+                            ),
+                                            ],
+                                          ),
+                      ),
+               ),
                       SizedBox(height:15,),
                      Container(
                       height: 46,
@@ -111,18 +174,25 @@ class _StudentProfileState extends State<StudentProfile> {
                       ),
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: RichText(
-                        text: TextSpan(
-                          text: 'Roll No: ', // Base text style
-                          style: TextStyle(fontSize: 16, color: Colors.black), // Default style
+                        child: Row(
                           children: [
-                            TextSpan(
-                              text: 'R001', 
-                              style: TextStyle(fontWeight: FontWeight.bold), // Bold text style
+                             Text(
+                              'Mobille No:', 
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16,
+                              ),
                             ),
-                          ],
+                            SizedBox(width: 10),
+                            Text(
+                              '9875778890', 
+                              style: TextStyle(
+                                fontWeight: FontWeight.normal,
+                                fontSize: 16,
+                              ),
+                            ),
+                                                ],
                         ),
-                                            ),
                       ),
                ),
                SizedBox(height:15,),
@@ -134,22 +204,30 @@ class _StudentProfileState extends State<StudentProfile> {
                         // color: Colors.white,
                         border: Border.all(color: Colors.grey, width: 1),
                       ),
-                      child: Padding(
+                      child:  Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: RichText(
-                        text: TextSpan(
-                          text: 'Mobile Number: ', // Base text style
-                          style: TextStyle(fontSize: 16, color: Colors.black), // Default style
-                          children: [
-                            TextSpan(
-                              text: '7890346789', 
-                              style: TextStyle(fontWeight: FontWeight.bold), // Bold text style
+                        child: Row(
+                                            children: [
+                         Text(
+                              'Birth Date:', 
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16,
+                              ),
                             ),
-                          ],
-                        ),
-                                            ),
+                            SizedBox(width: 10),
+                            Text(
+                              '12-3-2002', 
+                              style: TextStyle(
+                                fontWeight: FontWeight.normal,
+                                fontSize: 16,
+                              ),
+                            ),
+                                            ],
+                                          ),
                       ),
                ),
+               
                SizedBox(height:15,),
                      Container(
                       height: 46,
@@ -159,45 +237,27 @@ class _StudentProfileState extends State<StudentProfile> {
                         // color: Colors.white,
                         border: Border.all(color: Colors.grey, width: 1),
                       ),
-                      child: Padding(
+                      child:  Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: RichText(
-                        text: TextSpan(
-                          text: 'Birth Date: ', // Base text style
-                          style: TextStyle(fontSize: 16, color: Colors.black), // Default style
-                          children: [
-                            TextSpan(
-                              text: '20/8/2008', 
-                              style: TextStyle(fontWeight: FontWeight.bold), // Bold text style
+                        child: Row(
+                                            children: [
+                         Text(
+                              'Email :', 
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16,
+                              ),
                             ),
-                          ],
-                        ),
-                                            ),
-                      ),
-               ),
-               SizedBox(height:15,),
-                     Container(
-                      height: 46,
-                      width: 280,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5),
-                        // color: Colors.white,
-                        border: Border.all(color: Colors.grey, width: 1),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: RichText(
-                        text: TextSpan(
-                          text: 'Email ID: ', // Base text style
-                          style: TextStyle(fontSize: 16, color: Colors.black), // Default style
-                          children: [
-                            TextSpan(
-                              text: 'priyankai@gmail.com', 
-                              style: TextStyle(fontWeight: FontWeight.bold), // Bold text style
+                            SizedBox(width: 10),
+                            Text(
+                              'priyanka@gmail.com', 
+                              style: TextStyle(
+                                fontWeight: FontWeight.normal,
+                                fontSize: 16,
+                              ),
                             ),
-                          ],
-                        ),
-                                            ),
+                                            ],
+                                          ),
                       ),
                ),
 

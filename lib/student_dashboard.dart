@@ -1,8 +1,13 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_projects/attendance.dart';
+import 'package:flutter_projects/chatbot.dart';
 import 'package:flutter_projects/homework.dart';
+import 'package:flutter_projects/student_feedback.dart';
 import 'package:flutter_projects/student_profile.dart';
+import 'package:flutter_projects/syllabus.dart';
+
 
 class StudentDashboard extends StatefulWidget {
   const StudentDashboard({super.key});
@@ -157,7 +162,7 @@ class _StudentDashboardState extends State<StudentDashboard> {
                       radius: 45,
                       backgroundColor: Colors.white,
                     
-                      backgroundImage: AssetImage('assets/images/studentlogo.png'),
+                      backgroundImage: AssetImage('assets/images/stud.png'),
                     
                     ),
                   ),
@@ -246,26 +251,31 @@ class _StudentDashboardState extends State<StudentDashboard> {
 
               Padding(
                 padding: const EdgeInsets.all(5.0),
-                child: Container(
-                  height: 120,
-                  width: 169,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
-                    color: const Color.fromARGB(255, 235, 228, 164),
-                   
+                child: InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Syllabus()));
+                  },
+                  child: Container(
+                    height: 120,
+                    width: 169,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                      color: const Color.fromARGB(255, 235, 228, 164),
+                     
+                    ),
+                    child:  Row(
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.only(bottom: 50,left: 5),
+                                            child: Text('Syllabus',style: TextStyle(fontSize: 19,fontWeight: FontWeight.bold),),
+                                          ),
+                                          SizedBox(width: 20,),
+                                          Image.asset('assets/images/syllabus.png',height: 70,),
+                                           
+                                        ],
+                                       ),
+                  
                   ),
-                  child:  Row(
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.only(bottom: 50,left: 5),
-                                          child: Text('Syllabus',style: TextStyle(fontSize: 19,fontWeight: FontWeight.bold),),
-                                        ),
-                                        SizedBox(width: 20,),
-                                        Image.asset('assets/images/syllabus.png',height: 70,),
-                                         
-                                      ],
-                                     ),
-                
                 ),
               ),
 
@@ -287,64 +297,74 @@ class _StudentDashboardState extends State<StudentDashboard> {
                   
                    Padding(
                      padding: const EdgeInsets.all(5.0),
-                     child: Container(
-                                     height: 120,
-                                     width: 169,
-                                     decoration: BoxDecoration(
-                                       borderRadius: BorderRadius.circular(5),
-                                       color: const Color.fromARGB(255, 179, 207, 230),
-                                      
+                     child: InkWell(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>Chatbot()));
+                      },
+                       child: Container(
+                                       height: 120,
+                                       width: 169,
+                                       decoration: BoxDecoration(
+                                         borderRadius: BorderRadius.circular(5),
+                                         color: const Color.fromARGB(255, 179, 207, 230),
+                                        
+                                       ),
+                                       child:  Row(
+                                        children: [
+                                         Padding(
+                                            padding: const EdgeInsets.only(bottom: 50,left: 7),
+                                            child: Container(
+                                              height: 50,
+                                              width: 70,
+                                              // color: Colors.amber,
+                                              child: Text('Chat Option',style: TextStyle(fontSize: 19,fontWeight: FontWeight.bold),)),
+                                          ),
+                                          // SizedBox(width: 4,),
+                                          Padding(
+                                            padding: const EdgeInsets.only(top: 28),
+                                            child: Image.asset('assets/images/chat.png',height: 92,),
+                                          ),
+                                           
+                                        ],
+                                       ),
                                      ),
-                                     child:  Row(
-                                      children: [
-                                       Padding(
-                                          padding: const EdgeInsets.only(bottom: 50,left: 7),
-                                          child: Container(
-                                            height: 50,
-                                            width: 70,
-                                            // color: Colors.amber,
-                                            child: Text('Chat Option',style: TextStyle(fontSize: 19,fontWeight: FontWeight.bold),)),
-                                        ),
-                                        // SizedBox(width: 4,),
-                                        Padding(
-                                          padding: const EdgeInsets.only(top: 28),
-                                          child: Image.asset('assets/images/chat.png',height: 92,),
-                                        ),
-                                         
-                                      ],
-                                     ),
-                                   ),
+                     ),
                    ),
               // SizedBox(width: 10,),
               Padding(
                 padding: const EdgeInsets.all(5.0),
-                child: Container(
-                  height: 120,
-                  width: 169,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
-                    color: const Color.fromARGB(255, 229, 241, 119),
-                   
+                child: InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Attendance()));
+                  },
+                  child: Container(
+                    height: 120,
+                    width: 169,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                      color: const Color.fromARGB(255, 229, 241, 119),
+                     
+                    ),
+                    child:  Row(
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.only(bottom: 50,left: 5),
+                                            child: Container(
+                                              width: 87,
+                                              height: 50,
+                                              // color: Colors.yellow,
+                                              child: Text('Attendance Sheet',style: TextStyle(fontSize: 19,fontWeight: FontWeight.bold),)),
+                                          ),
+                                            
+                                          Padding(
+                                            padding: const EdgeInsets.only(top: 25),
+                                            child: Image.asset('assets/images/attendance.png',height: 59,),
+                                          ),
+                                           
+                                        ],
+                                       ),
+                  
                   ),
-                  child:  Row(
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.only(bottom: 50,left: 5),
-                                          child: Container(
-                                            width: 87,
-                                            height: 50,
-                                            // color: Colors.yellow,
-                                            child: Text('Attendance Sheet',style: TextStyle(fontSize: 19,fontWeight: FontWeight.bold),)),
-                                        ),
-                                          
-                                        Padding(
-                                          padding: const EdgeInsets.only(top: 25),
-                                          child: Image.asset('assets/images/attendance.png',height: 59,),
-                                        ),
-                                         
-                                      ],
-                                     ),
-                
                 ),
               ),
 
@@ -363,29 +383,34 @@ class _StudentDashboardState extends State<StudentDashboard> {
                   
                    Padding(
                      padding: const EdgeInsets.all(5.0),
-                     child: Container(
-                                     height: 120,
-                                     width: 169,
-                                     decoration: BoxDecoration(
-                                       borderRadius: BorderRadius.circular(10),
-                                       color: const Color.fromARGB(255, 244, 204, 143),
-                                      
+                     child: InkWell(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>StudentFeedback()));
+                      },
+                       child: Container(
+                                       height: 120,
+                                       width: 169,
+                                       decoration: BoxDecoration(
+                                         borderRadius: BorderRadius.circular(10),
+                                         color: const Color.fromARGB(255, 244, 204, 143),
+                                        
+                                       ),
+                                       child:  Row(
+                                        children: [
+                                         Padding(
+                                            padding: const EdgeInsets.only(bottom: 50,left: 5),
+                                            child: Text('Feedback',style: TextStyle(fontSize: 19,fontWeight: FontWeight.bold),),
+                                          ),
+                                          // SizedBox(width: 10,),
+                                          Padding(
+                                            padding: const EdgeInsets.only(top: 25),
+                                            child: Image.asset('assets/images/feedback.png',height: 54,),
+                                          ),
+                                           
+                                        ],
+                                       ),
                                      ),
-                                     child:  Row(
-                                      children: [
-                                       Padding(
-                                          padding: const EdgeInsets.only(bottom: 50,left: 5),
-                                          child: Text('Feedback',style: TextStyle(fontSize: 19,fontWeight: FontWeight.bold),),
-                                        ),
-                                        // SizedBox(width: 10,),
-                                        Padding(
-                                          padding: const EdgeInsets.only(top: 25),
-                                          child: Image.asset('assets/images/feedback.png',height: 54,),
-                                        ),
-                                         
-                                      ],
-                                     ),
-                                   ),
+                     ),
                    ),
               // SizedBox(width: 10,),
               Padding(

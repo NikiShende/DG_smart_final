@@ -65,7 +65,10 @@ class _StudentHomeworkState extends State<StudentHomework> {
                   )
                   ),
                   Container(
-                    child: Image.asset('assets/images/home.png',height: 100,),
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 42),
+                      child: Image.asset('assets/images/home.png',height: 100,),
+                    ),
                   )
               ],
             ),
@@ -185,48 +188,46 @@ class _StudentHomeworkState extends State<StudentHomework> {
                 
 
                 // Pending Content
+
+
+
                    if (_selectedTab == 'Pending')
                  SingleChildScrollView(
                  child: Column(
                   children: [
                     SizedBox(height: 40,),
-                    Container(
-                      height: 280,
-                      width: 330,
-                      decoration: BoxDecoration(
-                        
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(
-                          color: Colors.grey
-                        )
-                        
-                      ),
+                    Card(
+                      elevation: 5,
+                      margin: EdgeInsets.all(15),
+                     
                       child: Column(
                         children: [
                           
                          Padding(
-                           padding: const EdgeInsets.all(10.0),
+                           padding: const EdgeInsets.all(0.0),
                            child: Container(
                                                    height: 85,
                                                    decoration: BoxDecoration(
-                            color: const Color.fromARGB(255, 235, 230, 230),
-                            borderRadius: BorderRadius.circular(5)
+                            color: const Color.fromARGB(255, 212, 226, 243),
+                            borderRadius: BorderRadius.circular(8),
+                          
+                            
                             
                             ),
                            
                             child: Column(
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.only(right: 190,top: 3),
+                                  padding: const EdgeInsets.only(right: 190),
                                   child: Text('Mathematics',style: TextStyle(fontSize: 17,fontWeight: FontWeight.bold),),
                                 ),
                                 SizedBox(height: 7,),
                                 Row(
                                   children: [
-                                    SizedBox(width: 13,),
+                                    SizedBox(width: 15,),
                                   ElevatedButton(onPressed: (){
                            
-                                  }, child: Text('View',style: TextStyle(fontSize: 14,color: Colors.green),),
+                                  }, child: Text('View',style: TextStyle(fontSize: 13,color: Colors.green),),
                                   style: ElevatedButton.styleFrom(
                                     
                                      shape: RoundedRectangleBorder(
@@ -239,13 +240,13 @@ class _StudentHomeworkState extends State<StudentHomework> {
                                      ),
                                   ),
                                   ),
-                                  SizedBox(width: 13,),
+                                  SizedBox(width: 15,),
                                   ElevatedButton(onPressed: 
                                   (){
 
                                   },
                                 
-                                   child: Text('Submit',style: TextStyle(fontSize: 15,color: Colors.green),
+                                   child: Text('Submit',style: TextStyle(fontSize: 13,color: Colors.green),
                                   
                                   ),
                                   style: ElevatedButton.styleFrom(
@@ -260,10 +261,10 @@ class _StudentHomeworkState extends State<StudentHomework> {
                                   
                                   ),
                                   
-                                  SizedBox(width: 13,),
+                                  SizedBox(width: 15,),
                                   ElevatedButton(onPressed: (){
                            
-                                  }, child: Text('Download',style: TextStyle(fontSize: 14,color: Colors.green),),
+                                  }, child: Text('Download',style: TextStyle(fontSize: 13,color: Colors.green),),
                                   style: ElevatedButton.styleFrom(
                                      shape: RoundedRectangleBorder(
                                        borderRadius: BorderRadius.circular(5),
@@ -369,102 +370,93 @@ class _StudentHomeworkState extends State<StudentHomework> {
 
 
                     SizedBox(height: 9,),
-                     Container(
-                      height: 280,
-                      width: 330,
-                      decoration: BoxDecoration(
+                     Card(
+                      elevation: 5,
+                      margin: EdgeInsets.all(15),
                         
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(
-                          color: Colors.grey
-                        )
-                        
-                      ),
+                    
                       child: Column(
                         children: [
                           
-                         Padding(
-                           padding: const EdgeInsets.all(10.0),
-                           child: Container(
-                                                   height: 85,
-                                                   decoration: BoxDecoration(
-                            color: const Color.fromARGB(255, 235, 230, 230),
-                            borderRadius: BorderRadius.circular(5)
-                            
-                            ),
-                           
-                            child: Column(
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(right: 190,top: 3),
-                                  child: Text('Mathematics',style: TextStyle(fontSize: 17,fontWeight: FontWeight.bold),),
+                         Container(
+                                                 height: 85,
+                                                 decoration: BoxDecoration(
+                          color: const Color.fromARGB(255, 220, 225, 240),
+                          borderRadius: BorderRadius.circular(5)
+                          
+                          ),
+                         
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(right: 190,top: 3),
+                                child: Text('Mathematics',style: TextStyle(fontSize: 17,fontWeight: FontWeight.bold),),
+                              ),
+                              SizedBox(height: 7,),
+                              Row(
+                                children: [
+                                  SizedBox(width: 13,),
+                                ElevatedButton(onPressed: (){
+                         
+                                }, child: Text('View',style: TextStyle(fontSize: 12,color: Colors.green),),
+                                style: ElevatedButton.styleFrom(
+                                  
+                                   shape: RoundedRectangleBorder(
+                                     borderRadius: BorderRadius.circular(5),
+                                     side: BorderSide(
+                                      color: Colors.green,
+                                      
+                                     )
+                                     
+                                   ),
                                 ),
-                                SizedBox(height: 7,),
-                                Row(
-                                  children: [
-                                    SizedBox(width: 13,),
-                                  ElevatedButton(onPressed: (){
-                           
-                                  }, child: Text('View',style: TextStyle(fontSize: 14,color: Colors.green),),
-                                  style: ElevatedButton.styleFrom(
-                                    
-                                     shape: RoundedRectangleBorder(
-                                       borderRadius: BorderRadius.circular(5),
-                                       side: BorderSide(
-                                        color: Colors.green,
-                                        
-                                       )
-                                       
-                                     ),
-                                  ),
-                                  ),
-                                  SizedBox(width: 13,),
-                                  ElevatedButton(onPressed: (){
-                           
-                                  }, child: Text('Submit',style: TextStyle(fontSize: 15,color: Colors.green),
-                                  
-                                  ),
-                                  style: ElevatedButton.styleFrom(
-                                     shape: RoundedRectangleBorder(
-                                       borderRadius: BorderRadius.circular(5),
-                                       side: BorderSide(
-                                        color: Colors.green,
-                                       )
-                                     ),
-                                     
-                                  ),
-                                  
-                                  ),
-                                  
-                                  SizedBox(width: 13,),
-                                  ElevatedButton(onPressed: (){
-                           
-                                  }, child: Text('Download',style: TextStyle(fontSize: 14,color: Colors.green),),
-                                  style: ElevatedButton.styleFrom(
-                                     shape: RoundedRectangleBorder(
-                                       borderRadius: BorderRadius.circular(5),
-                                       side: BorderSide(
-                                        color: Colors.green
-                                       )
-                                     ),
-                                     
-                                     
-                                    
-                                  ),
+                                ),
+                                SizedBox(width: 15,),
+                                ElevatedButton(onPressed: (){
+                         
+                                }, child: Text('Submit',style: TextStyle(fontSize: 12,color: Colors.green),
                                 
-                                  ),
-                                ],
-                               ),
-
-                                             
+                                ),
+                                style: ElevatedButton.styleFrom(
+                                   shape: RoundedRectangleBorder(
+                                     borderRadius: BorderRadius.circular(5),
+                                     side: BorderSide(
+                                      color: Colors.green,
+                                     )
+                                   ),
+                                   
+                                ),
                                 
+                                ),
+                                
+                                SizedBox(width: 15,),
+                                ElevatedButton(onPressed: (){
+                         
+                                }, child: Text('Download',style: TextStyle(fontSize: 12,color: Colors.green),),
+                                style: ElevatedButton.styleFrom(
+                                   shape: RoundedRectangleBorder(
+                                     borderRadius: BorderRadius.circular(5),
+                                     side: BorderSide(
+                                      color: Colors.green
+                                     )
+                                   ),
+                                   
+                                   
+                                  
+                                ),
                               
+                                ),
                               ],
+                             ),
+                         
+                                           
                               
-                           ),
-                                                   
-                       ),
-                    ),
+                            
+                            ],
+                            
+                         ),
+                                                 
+                                                ),
                     Row(
                       children: [
                         Padding(
@@ -542,48 +534,54 @@ class _StudentHomeworkState extends State<StudentHomework> {
                   ),
 
 
+
+
+
+
+
+
+
+
+
+// submitted content
+
                   if (_selectedTab=='Submitted')
                  SingleChildScrollView(
                  child: Column(
                   children: [
                     SizedBox(height: 40,),
-                    Container(
-                      height: 280,
-                      width: 330,
-                      decoration: BoxDecoration(
-                        
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(
-                          color: Colors.grey
-                        )
-                        
-                      ),
+                     Card(
+                      elevation: 5,
+                      margin: EdgeInsets.all(15),
+                     
                       child: Column(
                         children: [
                           
                          Padding(
-                           padding: const EdgeInsets.all(10.0),
+                           padding: const EdgeInsets.all(0.0),
                            child: Container(
                                                    height: 85,
                                                    decoration: BoxDecoration(
-                            color: const Color.fromARGB(255, 235, 230, 230),
-                            borderRadius: BorderRadius.circular(5)
+                            color: const Color.fromARGB(255, 212, 226, 243),
+                            borderRadius: BorderRadius.circular(8),
+                          
+                            
                             
                             ),
                            
                             child: Column(
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.only(right: 190,top: 3),
+                                  padding: const EdgeInsets.only(right: 190),
                                   child: Text('Mathematics',style: TextStyle(fontSize: 17,fontWeight: FontWeight.bold),),
                                 ),
                                 SizedBox(height: 7,),
                                 Row(
                                   children: [
-                                    SizedBox(width: 13,),
+                                    SizedBox(width: 15,),
                                   ElevatedButton(onPressed: (){
                            
-                                  }, child: Text('View',style: TextStyle(fontSize: 14,color: Colors.green),),
+                                  }, child: Text('View',style: TextStyle(fontSize: 13,color: Colors.green),),
                                   style: ElevatedButton.styleFrom(
                                     
                                      shape: RoundedRectangleBorder(
@@ -596,13 +594,13 @@ class _StudentHomeworkState extends State<StudentHomework> {
                                      ),
                                   ),
                                   ),
-                                  SizedBox(width: 100,),
+                                  SizedBox(width: 105,),
+                                
                                   
                                   
-                                 
                                   ElevatedButton(onPressed: (){
                            
-                                  }, child: Text('Download',style: TextStyle(fontSize: 14,color: Colors.green),),
+                                  }, child: Text('Download',style: TextStyle(fontSize: 13,color: Colors.green),),
                                   style: ElevatedButton.styleFrom(
                                      shape: RoundedRectangleBorder(
                                        borderRadius: BorderRadius.circular(5),
@@ -684,7 +682,34 @@ class _StudentHomeworkState extends State<StudentHomework> {
                          child: Text('fghjkl', style: TextStyle(fontSize: 15,color: Colors.black,)),
                        ),
                         ]
+                    ),
+                    Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 116),
+                          child: ElevatedButton(onPressed: (){
+                          
+                          }, child: Text('Approved',style: TextStyle(fontSize: 13,color: Colors.white),),
+                          style: ElevatedButton.styleFrom(
+                            minimumSize: Size(20, 35),
+                            backgroundColor: Colors.green,
+                            shape: RoundedRectangleBorder(
+                             borderRadius: BorderRadius.circular(8),
+                             
+                            
+                          
+                             side: BorderSide(
+                               color: Colors.green
+                    ,
+                             ),
+                            ),
+                          
+                          ),
+                          ),
+                        )
+                      ],
                     )
+
 
 
 
@@ -707,44 +732,41 @@ class _StudentHomeworkState extends State<StudentHomework> {
 
 
 
+
+
                     SizedBox(height: 9,),
-                     Container(
-                      height: 280,
-                      width: 330,
-                      decoration: BoxDecoration(
-                        
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(
-                          color: Colors.grey
-                        )
-                        
-                      ),
+                       Card(
+                      elevation: 5,
+                      margin: EdgeInsets.all(15),
+                     
                       child: Column(
                         children: [
                           
                          Padding(
-                           padding: const EdgeInsets.all(10.0),
+                           padding: const EdgeInsets.all(0.0),
                            child: Container(
                                                    height: 85,
                                                    decoration: BoxDecoration(
-                            color: const Color.fromARGB(255, 235, 230, 230),
-                            borderRadius: BorderRadius.circular(5)
+                            color: const Color.fromARGB(255, 212, 226, 243),
+                            borderRadius: BorderRadius.circular(8),
+                          
+                            
                             
                             ),
                            
                             child: Column(
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.only(right: 190,top: 3),
+                                  padding: const EdgeInsets.only(right: 190),
                                   child: Text('Mathematics',style: TextStyle(fontSize: 17,fontWeight: FontWeight.bold),),
                                 ),
                                 SizedBox(height: 7,),
                                 Row(
                                   children: [
-                                    SizedBox(width: 13,),
+                                    SizedBox(width: 15,),
                                   ElevatedButton(onPressed: (){
                            
-                                  }, child: Text('View',style: TextStyle(fontSize: 14,color: Colors.green),),
+                                  }, child: Text('View',style: TextStyle(fontSize: 13,color: Colors.green),),
                                   style: ElevatedButton.styleFrom(
                                     
                                      shape: RoundedRectangleBorder(
@@ -757,13 +779,11 @@ class _StudentHomeworkState extends State<StudentHomework> {
                                      ),
                                   ),
                                   ),
-                                  SizedBox(width: 100,),
-                                 
                                   
-                                 
+                                  SizedBox(width: 105,),
                                   ElevatedButton(onPressed: (){
                            
-                                  }, child: Text('Download',style: TextStyle(fontSize: 14,color: Colors.green),),
+                                  }, child: Text('Download',style: TextStyle(fontSize: 13,color: Colors.green),),
                                   style: ElevatedButton.styleFrom(
                                      shape: RoundedRectangleBorder(
                                        borderRadius: BorderRadius.circular(5),
@@ -842,9 +862,35 @@ class _StudentHomeworkState extends State<StudentHomework> {
                       children: [
                        Padding(
                          padding: const EdgeInsets.only(left: 11),
-                         child: Text('fghjkl', style: TextStyle(fontSize: 15,color: Colors.black,)),
+                         child: Text('Complete math', style: TextStyle(fontSize: 15,color: Colors.black,)),
                        ),
                         ]
+                    ),
+                    Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 116),
+                          child: ElevatedButton(onPressed: (){
+                          
+                          }, child: Text(' Not Approved',style: TextStyle(fontSize: 12,color: Colors.white),),
+                          style: ElevatedButton.styleFrom(
+                            minimumSize: Size(20, 35),
+                            backgroundColor: Colors.red,
+                            shape: RoundedRectangleBorder(
+                             borderRadius: BorderRadius.circular(8),
+                             
+                            
+                          
+                             side: BorderSide(
+                               color: Colors.red
+                    ,
+                             ),
+                            ),
+                          
+                          ),
+                          ),
+                        )
+                      ],
                     )
 
 
@@ -855,6 +901,8 @@ class _StudentHomeworkState extends State<StudentHomework> {
 
 
                     ),
+
+
 
                   ],
                  )

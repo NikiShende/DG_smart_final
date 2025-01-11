@@ -141,7 +141,7 @@ class _WelcomeState extends State<Welcome> {
                             color: Colors.white,
                         
                                 borderRadius: BorderRadius.circular(5),
-                                border: Border.all(color: Colors.grey),
+                                // border: Border.all(color: Colors.grey),
                                 boxShadow: [
                                   BoxShadow(
                                     color: Colors.grey,
@@ -200,7 +200,7 @@ class _WelcomeState extends State<Welcome> {
                             color: Colors.white,
                         
                                 borderRadius: BorderRadius.circular(5),
-                                border: Border.all(color: Colors.grey),
+                                // border: Border.all(color: Colors.grey),
                                 boxShadow: [
                                   BoxShadow(
                                     color: Colors.grey,
@@ -262,7 +262,7 @@ class _WelcomeState extends State<Welcome> {
                             color: Colors.white,
                         
                                 borderRadius: BorderRadius.circular(5),
-                                border: Border.all(color: Colors.grey),
+                                // border: Border.all(color: Colors.grey),
                                 boxShadow: [
                                   BoxShadow(
                                     color: Colors.grey,

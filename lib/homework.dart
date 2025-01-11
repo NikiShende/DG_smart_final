@@ -46,7 +46,7 @@ class _HomeworkState extends State<Homework> {
 
 
 
-             SizedBox(height: 30,),
+             SizedBox(height: 25,),
 
           Row(
                 children: [
@@ -59,7 +59,7 @@ class _HomeworkState extends State<Homework> {
                       },
                        child: Container(
                                        height: 120,
-                                       width: 167,
+                                       width: 169,
                                        decoration: BoxDecoration(
                                          borderRadius: BorderRadius.circular(8),
                                          color: const Color.fromARGB(255, 127, 225, 143),
@@ -92,7 +92,7 @@ class _HomeworkState extends State<Homework> {
                   },
                   child: Container(
                     height: 120,
-                    width: 167,
+                    width: 169,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
                       color: const Color.fromARGB(255, 236, 203, 141),
@@ -136,7 +136,7 @@ class _HomeworkState extends State<Homework> {
                       },
                        child: Container(
                                        height: 120,
-                                       width: 167,
+                                       width: 169,
                                        decoration: BoxDecoration(
                                          borderRadius: BorderRadius.circular(8),
                                          color: const Color.fromARGB(255, 146, 165, 240),
@@ -170,7 +170,7 @@ class _HomeworkState extends State<Homework> {
                   },
                   child: Container(
                     height: 120,
-                    width: 167,
+                    width: 169,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
                       color: const Color.fromARGB(255, 212, 165, 231),
@@ -211,7 +211,7 @@ class _HomeworkState extends State<Homework> {
                       },
                        child: Container(
                                        height: 120,
-                                       width: 167,
+                                       width: 169,
                                        decoration: BoxDecoration(
                                          borderRadius: BorderRadius.circular(8),
                                          color: const Color.fromARGB(255, 249, 232, 132),
@@ -244,7 +244,7 @@ class _HomeworkState extends State<Homework> {
                   },
                   child: Container(
                     height: 120,
-                    width: 167,
+                    width: 169,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
                       color: const Color.fromARGB(255, 244, 147, 231),
@@ -281,7 +281,7 @@ class _HomeworkState extends State<Homework> {
                      padding: const EdgeInsets.all(5.0),
                      child: Container(
                                      height: 120,
-                                     width: 167,
+                                     width: 169,
                                      decoration: BoxDecoration(
                                        borderRadius: BorderRadius.circular(8),
                                        color: const Color.fromARGB(255, 189, 235, 166),
@@ -309,7 +309,7 @@ class _HomeworkState extends State<Homework> {
                 padding: const EdgeInsets.all(5.0),
                 child: Container(
                   height: 120,
-                  width: 167,
+                  width: 169,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8),
                     color: const Color.fromARGB(255, 164, 224, 235),
