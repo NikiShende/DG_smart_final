@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_projects/attendance.dart';
 import 'package:flutter_projects/chatbot.dart';
 import 'package:flutter_projects/homework.dart';
+import 'package:flutter_projects/report.dart';
 import 'package:flutter_projects/student_feedback.dart';
 import 'package:flutter_projects/student_profile.dart';
 import 'package:flutter_projects/syllabus.dart';
@@ -415,26 +416,31 @@ class _StudentDashboardState extends State<StudentDashboard> {
               // SizedBox(width: 10,),
               Padding(
                 padding: const EdgeInsets.all(5.0),
-                child: Container(
-                  height: 120,
-                  width: 169,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: const Color.fromARGB(255, 159, 236, 246),
-                   
+                child: InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Report()));
+                  },
+                  child: Container(
+                    height: 120,
+                    width: 169,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: const Color.fromARGB(255, 159, 236, 246),
+                     
+                    ),
+                    child:  Row(
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.only(bottom: 50,left: 5),
+                                            child: Text('Report',style: TextStyle(fontSize: 19,fontWeight: FontWeight.bold),),
+                                          ),
+                                          SizedBox(width: 10,),
+                                          Image.asset('assets/images/report.png',height: 70,),
+                                           
+                                        ],
+                                       ),
+                  
                   ),
-                  child:  Row(
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.only(bottom: 50,left: 5),
-                                          child: Text('Report',style: TextStyle(fontSize: 19,fontWeight: FontWeight.bold),),
-                                        ),
-                                        SizedBox(width: 10,),
-                                        Image.asset('assets/images/report.png',height: 70,),
-                                         
-                                      ],
-                                     ),
-                
                 ),
               ),
 

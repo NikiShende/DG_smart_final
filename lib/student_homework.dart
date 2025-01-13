@@ -195,7 +195,7 @@ class _StudentHomeworkState extends State<StudentHomework> {
                  SingleChildScrollView(
                  child: Column(
                   children: [
-                    SizedBox(height: 40,),
+                    SizedBox(height: 20,),
                     Card(
                       elevation: 5,
                       margin: EdgeInsets.all(15),
@@ -204,7 +204,7 @@ class _StudentHomeworkState extends State<StudentHomework> {
                         children: [
                           
                          Padding(
-                           padding: const EdgeInsets.all(0.0),
+                           padding: const EdgeInsets.only(top: 0.0),
                            child: Container(
                                                    height: 85,
                                                    decoration: BoxDecoration(
@@ -218,7 +218,7 @@ class _StudentHomeworkState extends State<StudentHomework> {
                             child: Column(
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.only(right: 190),
+                                  padding: const EdgeInsets.only(right: 190,top: 5),
                                   child: Text('Mathematics',style: TextStyle(fontSize: 17,fontWeight: FontWeight.bold),),
                                 ),
                                 SizedBox(height: 7,),
@@ -342,7 +342,7 @@ class _StudentHomeworkState extends State<StudentHomework> {
                     Row(
                       children: [
                        Padding(
-                         padding: const EdgeInsets.only(left: 11),
+                         padding: const EdgeInsets.only(left: 11,bottom: 15),
                          child: Text('fghjkl', style: TextStyle(fontSize: 15,color: Colors.black,)),
                        ),
                         ]
@@ -369,7 +369,7 @@ class _StudentHomeworkState extends State<StudentHomework> {
 
 
 
-                    SizedBox(height: 9,),
+                    SizedBox(height: 4,),
                      Card(
                       elevation: 5,
                       margin: EdgeInsets.all(15),
@@ -389,7 +389,7 @@ class _StudentHomeworkState extends State<StudentHomework> {
                           child: Column(
                             children: [
                               Padding(
-                                padding: const EdgeInsets.only(right: 190,top: 3),
+                                padding: const EdgeInsets.only(right: 190,top: 5),
                                 child: Text('Mathematics',style: TextStyle(fontSize: 17,fontWeight: FontWeight.bold),),
                               ),
                               SizedBox(height: 7,),
@@ -509,7 +509,7 @@ class _StudentHomeworkState extends State<StudentHomework> {
                     Row(
                       children: [
                        Padding(
-                         padding: const EdgeInsets.only(left: 11),
+                         padding: const EdgeInsets.only(left: 11,bottom: 10),
                          child: Text('fghjkl', style: TextStyle(fontSize: 15,color: Colors.black,)),
                        ),
                         ]
@@ -572,7 +572,7 @@ class _StudentHomeworkState extends State<StudentHomework> {
                             child: Column(
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.only(right: 190),
+                                  padding: const EdgeInsets.only(right: 190,top: 5),
                                   child: Text('Mathematics',style: TextStyle(fontSize: 17,fontWeight: FontWeight.bold),),
                                 ),
                                 SizedBox(height: 7,),
@@ -686,7 +686,7 @@ class _StudentHomeworkState extends State<StudentHomework> {
                     Row(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(left: 116),
+                          padding: const EdgeInsets.only(left: 116,bottom: 5),
                           child: ElevatedButton(onPressed: (){
                           
                           }, child: Text('Approved',style: TextStyle(fontSize: 13,color: Colors.white),),
@@ -734,7 +734,7 @@ class _StudentHomeworkState extends State<StudentHomework> {
 
 
 
-                    SizedBox(height: 9,),
+                    SizedBox(height: 5,),
                        Card(
                       elevation: 5,
                       margin: EdgeInsets.all(15),
@@ -757,7 +757,7 @@ class _StudentHomeworkState extends State<StudentHomework> {
                             child: Column(
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.only(right: 190),
+                                  padding: const EdgeInsets.only(right: 190,top: 5),
                                   child: Text('Mathematics',style: TextStyle(fontSize: 17,fontWeight: FontWeight.bold),),
                                 ),
                                 SizedBox(height: 7,),
@@ -869,7 +869,7 @@ class _StudentHomeworkState extends State<StudentHomework> {
                     Row(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(left: 116),
+                          padding: const EdgeInsets.only(left: 116,bottom: 5),
                           child: ElevatedButton(onPressed: (){
                           
                           }, child: Text(' Not Approved',style: TextStyle(fontSize: 12,color: Colors.white),),

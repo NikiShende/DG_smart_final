@@ -45,7 +45,7 @@ class _WelcomeState extends State<Welcome> {
                 
                 Row(
                   children: [
-                      SizedBox(width: 50,),
+                      SizedBox(width: 42,),
 
                     Text('Welcome to Smart school !', style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold,color: Colors.white),),
                     
@@ -54,7 +54,7 @@ class _WelcomeState extends State<Welcome> {
                 SizedBox(height: 20,),
                 Row(
                   children: [
-                    SizedBox(width: 60,),
+                    SizedBox(width: 55,),
                     Text('  MG JUNIOR COLLEGE,PRAVARANAGAR',style: TextStyle(fontSize: 15),)
                   ],
                 )

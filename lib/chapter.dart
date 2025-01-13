@@ -1,61 +1,147 @@
 import 'package:flutter/material.dart';
 
-class Chapter extends StatelessWidget {
-  final List<String> chapters; // A list of chapters passed from Syllabus screen
-
-  const Chapter({super.key, required this.chapters});
+class Chapter extends StatefulWidget {
+  const Chapter({super.key});
 
   @override
+  State<Chapter> createState() => _ChapterState();
+}
+
+class _ChapterState extends State<Chapter> {
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold
+    (
       appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Text('Chapters', style: TextStyle(fontSize: 21, color: Colors.white, fontWeight: FontWeight.bold)),
+        title: Text('Chapter',style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.bold),),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.white, size: 30),
-          onPressed: () {
-            Navigator.pop(context);
-          },
+        icon: Icon(
+          Icons.arrow_back,
+          size: 30.0, 
+          color: Colors.white,// Set the size of the back arrow here
         ),
+        onPressed: () {
+          Navigator.pop(context);
+        },
       ),
-    
-      body: Padding(
-        padding: const EdgeInsets.only(top: 15),
-        child: ListView.builder(
-          itemCount: chapters.length,
-          itemBuilder: (context, index) {
-            return Padding(
-              padding: const EdgeInsets.only(left: 10),
-              child: Container(
-                decoration: BoxDecoration(
-                 
-                  border: Border(
-                    top: BorderSide(
-                      color: Colors.grey,
-                      width: 1,
-                    )
-                  )
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 10),
-                  
-                  child: ListTile(
-                    contentPadding: EdgeInsets.all(0), // No padding in ListTile
-                     title: Text(
-                      "${index + 1}. ${chapters[index]}",  // Adding number before chapter
-                      style: TextStyle(fontSize: 18),
-                    ),
-                    onTap: () {
-                      // Navigate to the specific chapter details (optional)
-                      // Navigator.push(context, MaterialPageRoute(builder: (context) => ChapterDetails()));
-                    },
-                  ),
-                ),
+       backgroundColor: Colors.blue,
+        
+      ),
+
+      body:Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(14.0),
+            
+            child: Container(
+              
+              // height: 40,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                // color: Colors.grey,
               ),
-            );
-          },
-        ),
-      ),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      
+                      Container(
+                        height:40,
+                        width: 40,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(50),
+                          color: const Color.fromARGB(255, 218, 223, 225),
+                        ),
+                        child: Center(child: Text('1',style: TextStyle(fontSize: 18),)),
+                              
+                      ),
+                      SizedBox(width: 10,),
+                      Container(
+                        height: 40,
+                        width: 280,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          color: const Color.fromARGB(255, 218, 223, 225),
+                        ),
+                        child: Center(child: Text('Algebra ', style: TextStyle(fontSize: 18,color: Colors.black),)),
+                      )
+                    ],
+                  ),
+                  SizedBox(height: 15,),
+                    Row(
+                    children: [
+                      
+                      Container(
+                        height:40,
+                        width: 40,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(50),
+                          color: const Color.fromARGB(255, 218, 223, 225),
+                        ),
+                        child: Center(child: Text('2',style: TextStyle(fontSize: 18),)),
+                              
+                      ),
+                      SizedBox(width: 10,),
+                      Container(
+                        height: 35,
+                        width: 280,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                           color: const Color.fromARGB(255, 218, 223, 225),
+                        ),
+                        child: Center(child: Text('Geometry ', style: TextStyle(fontSize: 18,),)),
+                      )
+                    ],
+                  ),
+                  SizedBox(height: 10,),
+                    Row(
+                    children: [
+                      
+                      Container(
+                        height:40,
+                        width: 40,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(50),
+                          color: const Color.fromARGB(255, 218, 223, 225),
+                        ),
+                        child: Center(child: Text('3',style: TextStyle(fontSize: 18),)),
+                              
+                      ),
+                      SizedBox(width: 10,),
+                      Container(
+                        height: 40,
+                        width: 280,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                           color: const Color.fromARGB(255, 218, 223, 225),
+                        ),
+                        child: Center(child: Text('Calculus ', style: TextStyle(fontSize: 18,),)),
+                      )
+                    ],
+                  ),
+                ],
+              ),
+            
+
+
+
+
+
+            ),
+          ),
+
+
+
+        ],
+      )
+
+
+
+
+
+
+
+
     );
   }
 }
