@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_projects/chapter.dart';
+import 'package:flutter_projects/main.dart';
 
 class Syllabus extends StatefulWidget {
   const Syllabus({super.key});
@@ -17,7 +18,7 @@ class _SyllabusState extends State<Syllabus> {
           Container(
             height: 100,
             decoration: BoxDecoration(
-              color: Colors.blue
+              color: primaryColor
             ),
             
             child: Row(

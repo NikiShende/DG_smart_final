@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_projects/main.dart';
 import 'package:flutter_projects/student_homework.dart';
 
 class Homework extends StatefulWidget {
@@ -18,7 +19,7 @@ class _HomeworkState extends State<Homework> {
           Container(
             height: 100,
             decoration: BoxDecoration(
-              color: Colors.blue
+              color: primaryColor
             ),
             
             child: Row(

@@ -121,7 +121,10 @@
 //   }
 // }
 
+
+
 import 'package:flutter/material.dart';
+import 'package:flutter_projects/main.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 class Attendance extends StatefulWidget {
@@ -155,96 +158,99 @@ class _AttendanceState extends State<Attendance> {
         ),
       ),
       builder: (context) {
-        return Container(
-          height: 340,
-          child: Column(
-            children: [
-              SizedBox(height: 5),
-              Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 13, left: 10),
-                    child: Text(
-                      'Date',
-                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+        return SingleChildScrollView(
+          child: Container(
+            height: 340,
+            child: Column(
+              children: [
+                SizedBox(height: 5),
+                Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 13, left: 10),
+                      child: Text(
+                        'Date',
+                        style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                      ),
                     ),
-                  ),
-                ],
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: InkWell(
-                  onTap: () async {
-                    // Show the date picker
-                    DateTime? datePicked = await showDatePicker(
-                      context: context,
-                      initialDate: DateTime.now(),
-                      firstDate: DateTime(2025),
-                      lastDate: DateTime(2026),
-                    );
-
-                    if (datePicked != null) {
-                      // Update the date controller with the selected date
-                      setState(() {
-                        _dateController.text = "${datePicked.toLocal()}".split(' ')[0];
-                      });
-                    }
-                  },
-                  child: TextFormField(
-                    controller: _dateController, // Use the correct controller
-                    decoration: InputDecoration(
-                      hintText: 'Select Date',
-                      border: OutlineInputBorder(),
-                    ),
-                    readOnly: true, // Prevent manual typing
-                  ),
+                  ],
                 ),
-              ),
-              SizedBox(height: 7),
-              Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 5, left: 10),
-                    child: Text(
-                      'Detailed Explanation',
-                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                ],
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: TextField(
-                  controller: _reasonController,
-                  decoration: InputDecoration(
-                    labelText: 'Type here..',
-                    border: OutlineInputBorder(),
-                  ),
-                  maxLines: 3,
-                ),
-              ),
-              SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  ElevatedButton(
-                    onPressed: () {
-                      setState(() {
-                        _reason = _reasonController.text; // Save the reason
-                      });
-                      Navigator.pop(context); // Close the bottom sheet
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: InkWell(
+                    onTap: () async {
+                      // Show the date picker
+                      DateTime? datePicked = await showDatePicker(
+                        context: context,
+                        initialDate: DateTime.now(),
+                        firstDate: DateTime(2025),
+                        lastDate: DateTime(2026),
+                      );
+          
+                      if (datePicked != null) {
+                        // Update the date controller with the selected date
+                        setState(() {
+                          _dateController.text = "${datePicked.toLocal()}".split(' ')[0];
+                        });
+                      }
                     },
-                    child: Text('Submit', style: TextStyle(color: Colors.white, fontSize: 14)),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.blue,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8),
+                    child: AbsorbPointer(
+                      child: TextFormField(
+                        controller: _dateController, // Use the correct controller
+                        decoration: InputDecoration(
+                          hintText: 'Select Date',
+                          border: OutlineInputBorder(),
+                        ),
                       ),
                     ),
                   ),
-                ],
-              ),
-            ],
+                ),
+                SizedBox(height: 7),
+                Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 5, left: 10),
+                      child: Text(
+                        'Detailed Explanation',
+                        style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  ],
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: TextField(
+                    controller: _reasonController,
+                    decoration: InputDecoration(
+                      labelText: 'Type here..',
+                      border: OutlineInputBorder(),
+                    ),
+                    maxLines: 3,
+                  ),
+                ),
+                SizedBox(height: 10),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {
+                        setState(() {
+                          _reason = _reasonController.text; // Save the reason
+                        });
+                        Navigator.pop(context); // Close the bottom sheet
+                      },
+                      child: Text('Submit', style: TextStyle(color: Colors.white, fontSize: 14)),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: primaryColor,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         );
       },
@@ -254,7 +260,7 @@ class _AttendanceState extends State<Attendance> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: AppBar(toolbarHeight: 70,
         title: Padding(
           padding: const EdgeInsets.only(left: 30),
           child: Text(
@@ -281,7 +287,7 @@ class _AttendanceState extends State<Attendance> {
             ),
           ),
         ],
-        backgroundColor: Colors.blue,
+        backgroundColor: primaryColor,
       ),
       body: Padding(
         padding: const EdgeInsets.all(15.0),
@@ -373,7 +379,11 @@ class _AttendanceState extends State<Attendance> {
                           width: 328,
                           decoration: BoxDecoration(
                             color: const Color.fromARGB(255, 191, 226, 255),
-                            borderRadius: BorderRadius.all(Radius.circular(9)),
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(10) ,
+                              topRight: Radius.circular(10) ,
+                      
+                            )
                           ),
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),

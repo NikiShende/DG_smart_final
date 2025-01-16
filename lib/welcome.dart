@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_projects/login.dart';
+import 'package:flutter_projects/main.dart';
 
 class Welcome extends StatefulWidget {
   const Welcome({super.key});
@@ -21,7 +22,7 @@ class _WelcomeState extends State<Welcome> {
             height: 200,
             width: 400,
             decoration: BoxDecoration(
-              color: Colors.lightBlue,
+              color: primaryColor,
               borderRadius: BorderRadius.only(
                  
                   bottomLeft: Radius.circular(40),
@@ -118,7 +119,7 @@ class _WelcomeState extends State<Welcome> {
             
       //student panel
 
-           SizedBox(height: 30,),
+           SizedBox(height: 20,),
           Column(
             children: [
               Row(
@@ -167,7 +168,7 @@ class _WelcomeState extends State<Welcome> {
                       SizedBox(height: 10,),
                       Row(
                         children: [
-                          Text('student',style: TextStyle(fontSize: 19,color: Colors.black),)
+                          Text('Student',style: TextStyle(fontSize: 19,color: Colors.black,fontWeight: FontWeight.bold),)
                         ],
                       )
                     ],
@@ -226,7 +227,7 @@ class _WelcomeState extends State<Welcome> {
                       SizedBox(height: 10,),
                       Row(
                         children: [
-                          Text('Teacher',style: TextStyle(fontSize: 19,color: Colors.black),)
+                          Text('Teacher',style: TextStyle(fontSize: 19,color: Colors.black,fontWeight: FontWeight.bold),)
                         ],
                       )
                     ],
@@ -243,7 +244,7 @@ class _WelcomeState extends State<Welcome> {
 
               // parent panel
 
-              SizedBox(height: 30,),
+              SizedBox(height: 20,),
              Row(
                 children: [
                   SizedBox(width: 100,),
@@ -288,7 +289,7 @@ class _WelcomeState extends State<Welcome> {
                       SizedBox(height: 10,),
                       Row(
                         children: [
-                          Text('Parent',style: TextStyle(fontSize: 19,color: Colors.black,),)
+                          Text('Parent',style: TextStyle(fontSize: 19,color: Colors.black,fontWeight: FontWeight.bold),)
                         ],
                       )
                     ],

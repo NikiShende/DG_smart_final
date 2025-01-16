@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_projects/main.dart';
 
 class StudentFeedback extends StatefulWidget {
   const StudentFeedback({super.key});
@@ -14,7 +15,7 @@ class _StudentFeedbackState extends State<StudentFeedback> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: 
-      AppBar(
+      AppBar(toolbarHeight: 70,
         title: Text('Feedback',style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.bold),),
       leading: IconButton(
         icon: Icon(
@@ -26,7 +27,7 @@ class _StudentFeedbackState extends State<StudentFeedback> {
           Navigator.pop(context);
         },
       ),
-          backgroundColor: Colors.blue,
+          backgroundColor: primaryColor,
         
       ),
       body: SingleChildScrollView(

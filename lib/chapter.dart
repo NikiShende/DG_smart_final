@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_projects/main.dart';
 
 class Chapter extends StatefulWidget {
   const Chapter({super.key});
@@ -12,7 +13,7 @@ class _ChapterState extends State<Chapter> {
   Widget build(BuildContext context) {
     return Scaffold
     (
-      appBar: AppBar(
+      appBar: AppBar(toolbarHeight: 70,
         title: Text('Chapter',style: TextStyle(fontSize: 25,color: Colors.white,fontWeight: FontWeight.bold),),
         leading: IconButton(
         icon: Icon(
@@ -24,7 +25,7 @@ class _ChapterState extends State<Chapter> {
           Navigator.pop(context);
         },
       ),
-       backgroundColor: Colors.blue,
+       backgroundColor: primaryColor,
         
       ),
 
